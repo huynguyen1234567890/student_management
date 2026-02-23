@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> <!-- Khai bao namespace de dung th:* -->
+<head>
+<meta charset="UTF-8">
+<title>Danh Sach Sinh Vien</title>
+<!-- CSS don gian -->
+<style>
+body { font-family: sans-serif; padding: 20px; }
+{% comment %} table { width: 100%; border-collapse: collapse; margin-top: 20px; } {% endcomment %}
+th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+th { background-color: #f2f2f2; }
+</style>
+<link rel="stylesheet" th:href="@{/css/add_student.css}">
+</head>
+<body>
+
+
+    <h1>CHỈNH SỬA THÔNG TIN</h1>
+
+
+    <form th:action="@{/students/{id}(id=${student.id})}"
+      th:object="${student}"
+      method="post">
+
+    <!-- giả lập PUT -->
+        <input type="hidden" name="_method" value="put"/>
+
+        <input th:field="*{id}" readonly />
+
+        <input th:field="*{name}" placeholder="Name"/>
+
+        <input th:field="*{email}" placeholder="Email"/>
+
+        <input th:field="*{age}" placeholder="Age"/>
+
+        <button type="submit">UPDATE</button>
+
+    </form>
+
+    <a th:href = "@{/students/{id}(id=${student.id})}">
+        quay lại
+    </a>
+
+</body>
+</html>

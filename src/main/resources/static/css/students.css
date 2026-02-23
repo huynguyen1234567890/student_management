@@ -1,0 +1,41 @@
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toolbar form {
+    display: flex;
+    /* background-color: red; */
+    height: 30px;
+    gap: 5px;
+}
+
+.toolbar form button{
+    width: 100px;
+}
+
+.toolbar button {
+    margin-left: auto;
+    background-color: aqua ;
+    height: 30px;
+    width: auto;
+    cursor: pointer;
+
+}
+
+.toolbar button:hover{
+    background-color: rgb(42, 215, 215) ;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
