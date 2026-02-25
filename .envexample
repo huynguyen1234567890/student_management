@@ -1,0 +1,9 @@
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+POSTGRES_DB=student_management
+
+# POSTGREP_URL=jdbc:postgresql://${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}
+
+POSTGRES_URL= connect_string 
+POSTGRES_USER=username
+POSTGRES_PASSWORD=password
